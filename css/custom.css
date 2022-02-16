@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: "abitareSans";
+  src: url("../assets/fonts/AbitareSans-50.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #a1c1d0;
+  background-color: #f5f5f5;
+  font-size: 20px;
+  line-height: 1.5;
+  background-color: #dde3e7;
+  color: #043351;
+  background-color: white;
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: "abitareSans";
+  letter-spacing: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  background-color: white;
+  margin: 0 32px;
+}
+.nav__burger {
+  height: 36px;
+  width: 112px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+}
+.nav__burger-stripe {
+  width: 112px;
+  height: 4px;
+  background-color: black;
+  transition: 0.4s ease-in;
+}
+.nav__burger-stripe--bright {
+  background-color: white;
+}
+.nav__burger-stripe:nth-child(2) {
+  width: 72px;
+}
+/* site-main */
+.filter__list {
+  margin-top: 24px;
+  display: flex;
+}
+.filter__item {
+  margin-right: 16px;
+}
+.filter__item a {
+  font-size: 16px;
+}
+.filter__item:nth-child(1) {
+  padding-bottom: 4px;
+  border-bottom: 3px solid black;
+}
+.site-main {
+  padding: 0 32px;
+  text-align: left;
+}
+.titles {
+  margin-top: 120px;
+}
+.title__item a {
+  letter-spacing: 2px;
+  font-size: 50px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.title__item a:hover {
+  font-weight: 600;
+}
+.title__item {
+  margin-bottom: 32px;
+}
+.image__preview {
+  height: 450px;
+  width: 600px;
+  background-color: #49f002;
+  position: fixed;
+  left: 65%;
+  transform: translateX(-50%);
+  top: 362px;
+  margin-bottom: 36px;
+  z-index: -1;
+}
+/* about */
+.about {
+  height: calc(100vh - 176px);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.about__img {
+  background-image: url("../assets/images/internazionale_corpo.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  right: 0;
+  top: -120px;
+  z-index: 2;
+}
+.about__text-section {
+  margin-left: 32px;
+  max-width: calc(50vw - 64px);
+  overflow-y: scroll;
+  height: 800px;
+}
+.about__heading {
+  font-size: 72px;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 400px 0;
+  cursor: pointer;
+}
+.about__text {
+  margin: 24px 0 42px 0;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+}
+.about__text-section::-webkit-scrollbar {
+  display: none;
+}
+/* footer */
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 32px;
+}
+footer p {
+  font-size: 16px;
+}
+.footer--about {
+  color: white;
+}
+/* modal */
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -5;
+  display: flex;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 2s ease-in;
+}
+.modal-box {
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-box:nth-child(1) {
+  border-right: 4px solid black;
+}
+.modal-text {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+header,
+main,
+footer {
+  position: relative;
+  opacity: 1;
+  transition: 0.4s ease-in;
+}
+main,
+footer {
+  z-index: 5;
+}
+.nav__burger {
+  z-index: 5;
+  position: relative;
+}
+/* contact */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 32px;
+  height: calc(100vh - 176px);
+}
+.contact__text-box {
+  width: 100%;
+}
+.contact__text {
+  font-size: 116px;
+  text-transform: uppercase;
+}
+.contact__text span {
+  color: #49f002;
+}
+.contact-socials a {
+  font-size: 50px;
+  text-transform: uppercase;
+  display: block;
+}
+.contact-socials a:hover {
+  font-weight: 600;
+}
