@@ -18,9 +18,6 @@ get_header();
 	<?php if ( is_page('about')) : ?>
 		<div class='about'>
 			<div class='about__text-section'>
-				<h2 class='about__heading'>
-					scroll down 
-				</h2>
 				<p class='about__text'>
 					I want to deliver projects aimed to bring a positive impact on our lives over gaining a profit only. For this matter, I experiment with narrative styles and commonly focus on including the entertainment elements into the projects. It ensures a greater engagement from the audience whether the goal of the projects is to educate or amuse. 	
 				</p>

@@ -56,6 +56,19 @@ get_header();
 		<div class='image__preview'>
 
 		</div>
+
+		<?php query_posts('posts_per_page=10&category_name=photo&orderby=asc'); ?>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+							<div class='site-hero__overlay '>
+								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+								<a href="<?php echo get_permalink(); ?>">
+									<img class='site-hero__img' src="<?php echo $url ?>" />
+								</a>
+							</div>
+					<?php
+					endwhile; 
+				endif; 
+				?>
 	</main><!-- #main -->
 <?php
 // get_sidebar();

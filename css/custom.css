@@ -4,6 +4,10 @@
   font-family: "abitareSans";
   src: url("../assets/fonts/AbitareSans-50.ttf");
 }
+@font-face {
+  font-family: "metric";
+  src: url("../assets/fonts/Metric-Regular.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -117,38 +121,30 @@ nav {
   height: calc(100vh - 176px);
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .about__img {
-  background-image: url("../assets/images/internazionale_corpo.jpeg");
+  background-image: url("../assets/images/stock.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 50vw;
   position: absolute;
-  right: 0;
+  right: 32px;
   top: -120px;
   z-index: 2;
 }
 .about__text-section {
   margin-left: 32px;
-  max-width: calc(50vw - 64px);
-  overflow-y: scroll;
-  height: 800px;
-}
-.about__heading {
-  font-size: 72px;
-  color: black;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 400px 0;
-  cursor: pointer;
+  max-width: calc(30vw - 64px);
 }
 .about__text {
   margin: 24px 0 42px 0;
-  font-size: 24px;
+  font-size: 16px;
   letter-spacing: 1.2px;
+  font-family: metric, sans-serif;
+  font-weight: 300;
 }
 .about__text-section::-webkit-scrollbar {
   display: none;

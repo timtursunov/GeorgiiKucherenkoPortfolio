@@ -11,30 +11,43 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="left">
+			<div class="heading-box">
+				<h2>
+					heading title
+				</h2>
+			</div>
+			<div class='single__image'>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			</div>
 
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'georgii' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'georgii' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
+		</div>
+		<div class="right">
+			<div class='description-box'>
+				<div class="descirption__heading-box">
+					<h3>
+						description
+					</h3>
+				</div>
+				<div class='description__text-box'>
+					<p class='descrioption__text'>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente possimus quia harum, sit nihil commodi adipisci facere voluptatem dignissimos quas ea porro assumenda corrupti, libero dolor nostrum! In, facere asperiores.
+					</p>
+				</div>
+			</div>
+			<div class="location__box">
+				<div class='location__heading-box'>
+					<h4>
+						location
+					</h4>
+				</div>
+				<div class='location__text-box'>
+					<p class='location__text'>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero cupiditate et a asperiores, iusto beatae distinctio odit soluta facere debitis minus quasi quod, quo hic, ullam ex consequuntur voluptates possimus.
+					</p>
+				</div>
+			</div>
+		</div>
 	</main><!-- #main -->
-
 <?php
-get_sidebar();
 get_footer();
